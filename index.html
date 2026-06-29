@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARENIX.app | Zásady ochrany osobních údajů</title>
+  <title>ARENIX.app | Privacy Policy</title>
+  <meta name="description" content="Core Arena Privacy Policy for ARENIX.app Partners, Arena Participants and community members." />
   <meta name="robots" content="noindex, nofollow" />
+  <link rel="alternate" hreflang="en" href="https://arenix.app/privacy.html" />
+  <link rel="alternate" hreflang="cs" href="https://arenix.app/cs/privacy.html" />
+  <link rel="alternate" hreflang="de" href="https://arenix.app/de/privacy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://arenix.app/privacy.html" />
   <style>
     :root {
       --bg-deep: #07150f;
@@ -316,11 +321,50 @@
         padding: 40px;
       }
     }
-  </style>
+  
+/* === LANGUAGE SWITCHER PATCH === */
+.lang-switch {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(214, 173, 85, 0.36);
+  background: rgba(255, 255, 255, 0.46);
+  border-radius: 999px;
+  padding: 6px 8px;
+  flex-wrap: wrap;
+}
+.lang-switch a {
+  color: var(--green-dark);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border-radius: 999px;
+}
+.lang-switch a.active {
+  color: var(--gold-soft);
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+}
+.lang-switch a:hover {
+  color: var(--green);
+}
+.lang-switch a.active:hover {
+  color: var(--gold-soft);
+}
+@media (max-width: 900px) {
+  .lang-switch {
+    justify-content: center;
+  }
+}
+</style>
 </head>
 <body oncontextmenu="return false">
   <div class="watermark">ARENIX.app · Protected Privacy View</div>
-  <a class="floating-toc" href="#obsah" aria-label="Zpět na obsah">↑ Obsah</a>
+  <a class="floating-toc" href="#obsah" aria-label="Back to contents">↑ Contents</a>
 
   <main class="page">
     <header class="hero">
@@ -332,70 +376,240 @@
             <span>Core Arena Privacy Policy</span>
           </div>
         </div>
-        <div class="badge"><span class="badge-dot"></span>Zásady ochrany osobních údajů</div>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end;">
+          
+          <nav class="lang-switch" aria-label="Language switcher">
+            <a class="active" href="/privacy.html">EN</a>
+            <a class="" href="/cs/privacy.html">CZ</a>
+            <a class="" href="/de/privacy.html">DE</a>
+          </nav>
+          <div class="badge"><span class="badge-dot"></span>Privacy Policy</div>
+        </div>
       </div>
 
       <h1>Privacy Policy</h1>
-      <p class="subtitle">Zásady ochrany osobních údajů platformy ARENIX.app pro Partnery, účastníky Arény a členy komunit.</p>
+      <p class="subtitle">Privacy Policy of the ARENIX.app platform for Partners, Arena Participants and community members.</p>
 
       <div class="meta-grid">
         <div class="meta-card">
-          <span>Datum účinnosti</span>
+          <span>Effective Date</span>
           <strong>03. MAY 2026</strong>
         </div>
         <div class="meta-card">
-          <span>Poskytovatel software</span>
-          <strong>AKO SOLUTIONS LLC, TRADE LICENCE 887171, DUBAI, SAE</strong>
+          <span>Software Provider</span>
+          <strong>AKO SOLUTIONS LLC, TRADE LICENCE 887171, DUBAI, UAE</strong>
         </div>
         <div class="meta-card">
-          <span>Webová stránka</span>
-          <strong>arenix.app a její podstránky</strong>
+          <span>Website</span>
+          <strong>arenix.app and its subpages</strong>
         </div>
       </div>
     </header>
 
     <div class="layout">
-      <aside class="toc" id="obsah" aria-label="Obsah">
-        <h2>Obsah</h2>
-        <a href="#s1">1. Úvod</a>
-        <a href="#s2">2. Základní datový model platformy</a>
-        <a href="#s3">3. Údaje o Partnerech</a>
-        <a href="#s4">4. Údaje o účastnících Arény</a>
-        <a href="#s5">5. Partnerova komunita</a>
-        <a href="#s6">6. Arena Credits, leaderboard a aktivita</a>
-        <a href="#s7">7. Technické údaje</a>
-        <a href="#s8">8. Právní základy zpracování</a>
-        <a href="#s9">9. Zvláštní partnerské funkce</a>
-        <a href="#s10">10. Sdílení údajů s třetími stranami</a>
-        <a href="#s11">11. Uchovávání údajů</a>
-        <a href="#s12">12. Práva uživatelů</a>
-        <a href="#s13">13. Bezpečnost</a>
-        <a href="#s14">14. Děti a nezletilé osoby</a>
-        <a href="#s15">15. Změny těchto Zásad</a>
-        <a href="#s16">16. Kontakt a přístup k platformě</a>
+      <aside class="toc" id="obsah" aria-label="Contents">
+        <h2>Contents</h2>
+        <a href="#s1">1. Introduction</a>
+        <a href="#s2">2. Basic Data Model of the Platform</a>
+        <a href="#s3">3. Data We May Process About Partners</a>
+        <a href="#s4">4. Data We May Process About Arena Participants</a>
+        <a href="#s5">5. Partner Community</a>
+        <a href="#s6">6. Arena Credits, Leaderboard and Activity</a>
+        <a href="#s7">7. Technical Data</a>
+        <a href="#s8">8. Legal Bases for Processing</a>
+        <a href="#s9">9. Special Partner Features</a>
+        <a href="#s10">10. Sharing Data with Third Parties</a>
+        <a href="#s11">11. Data Retention</a>
+        <a href="#s12">12. User Rights</a>
+        <a href="#s13">13. Security</a>
+        <a href="#s14">14. Children and Minors</a>
+        <a href="#s15">15. Changes to this Policy</a>
+        <a href="#s16">16. Contact and Platform Access</a>
       </aside>
 
       <article class="content">
-        <section class="section" id="s1"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">1</span>Úvod</h2><p>Tyto Zásady ochrany osobních údajů vysvětlují, jak <strong>ARENIX.app</strong> zpracovává osobní údaje při používání platformy.</p><p><strong>ARENIX.app</strong> je postaven na partnerském modelu. Platforma slouží především Partnerům, kteří vytvářejí vlastní Arény, zvou členy své komunity a ověřují aktivitu své komunity v praxi.</p><p>Naším cílem je zpracovávat pouze takové údaje, které jsou potřebné pro provoz platformy, bezpečnost, správu partnerského přístupu, fungování Arén a ochranu integrity systému.</p></section>
-        <section class="section" id="s2"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">2</span>Jaký je základní datový model platformy</h2><p><strong>ARENIX.app</strong> pracuje se dvěma základními skupinami uživatelů:</p><ul><li><strong>Partner</strong> – osoba, značka, komunita, mentor, edukátor nebo lídr komunity, který vytváří vlastní Arénu a zve členy své komunity.</li><li><strong>Účastník Arény</strong> – člen komunity, který vstupuje do Arény prostřednictvím pozvánky nebo vstupního odkazu od Partnera.</li></ul><p>Platforma není navržena jako veřejná databáze traderů. ARENIX automaticky nepřebírá Partnerovu komunitu jako vlastní obchodní databázi.</p></section>
-        <section class="section" id="s3"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">3</span>Jaké údaje můžeme zpracovávat o Partnerech</h2><p>U Partnerů můžeme zpracovávat zejména:</p><ul><li>jméno nebo název značky;</li><li>kontaktní údaj;</li><li>název komunity;</li><li>velikost komunity;</li><li>odkaz na Telegram, Discord, sociální síť nebo jiný komunitní kanál;</li><li>údaje z partnerské žádosti;</li><li>údaje o vytvořených Arénách;</li><li>technické a provozní údaje související s používáním platformy;</li><li>komunikaci související s partnerským přístupem.</li></ul><p>Tyto údaje používáme zejména pro:</p><ul><li>vytvoření a správu partnerského přístupu;</li><li>umožnění vytvoření Arény;</li><li>posouzení vhodnosti komunity pro další spolupráci;</li><li>zajištění bezpečnosti platformy;</li><li>ochranu proti zneužití;</li><li>provozní komunikaci s Partnerem;</li><li>rozvoj partnerského vztahu.</li></ul></section>
-        <section class="section" id="s4"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">4</span>Jaké údaje můžeme zpracovávat o účastnících Arény</h2><p>U účastníků Arény se snažíme zpracovávat pouze minimální rozsah údajů potřebný pro vstup a fungování v Aréně.</p><p>Může jít zejména o:</p><ul><li>emailovou adresu;</li><li>uživatelský identifikátor nebo přezdívku;</li><li>informaci o vstupu přes konkrétní pozvánku;</li><li>přiřazení ke konkrétní Aréně;</li><li>aktivitu v Aréně;</li><li>pořadí v leaderboardu;</li><li>Arena Credits;</li><li>technické údaje potřebné pro bezpečnost a provoz platformy.</li></ul><p>ARENIX nepotřebuje znát skutečnou identitu účastníka Arény, pokud to není nezbytné pro konkrétní funkci, bezpečnostní důvod, právní povinnost nebo zvláštní partnerské podmínky.</p></section>
-        <section class="section" id="s5"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">5</span>Partnerova komunita</h2><p>Partner si buduje svůj vlastní vztah se svou komunitou.</p><p>ARENIX poskytuje nástroj, rozhraní a infrastrukturu. ARENIX automaticky neprodává, nepřebírá ani nevyužívá Partnerovu komunitu jako vlastní obchodní databázi.</p><p>Pokud Partner pozve své členy do Arény, údaje těchto účastníků se používají především pro fungování konkrétní Arény, zobrazení výsledků, správu přístupu a bezpečnost platformy.</p><p>Partner odpovídá za to, že své členy zve zákonným a korektním způsobem.</p></section>
-        <section class="section" id="s6"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">6</span>Arena Credits, leaderboard a aktivita v Aréně</h2><p>Platforma může zpracovávat údaje o aktivitě v Aréně, pořadí, skóre, Arena Credits a dalších údajích potřebných pro zobrazení výsledků podle pravidel konkrétní Arény.</p><p>Tyto údaje slouží pro fungování Arény, zobrazení leaderboardu, vyhodnocení aktivity komunity a ochranu integrity platformy.</p><p>Arena Credits nemají peněžní hodnotu a nejsou určeny k výplatě, směně ani použití jako náhrada peněz.</p></section>
-        <section class="section" id="s7"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">7</span>Technické údaje</h2><p>Při používání platformy můžeme zpracovávat technické údaje, například:</p><ul><li>IP adresu;</li><li>typ zařízení;</li><li>typ prohlížeče;</li><li>operační systém;</li><li>čas přístupu;</li><li>technické logy;</li><li>bezpečnostní logy;</li><li>chybové záznamy;</li><li>informace potřebné pro ochranu platformy.</li></ul><p>Tyto údaje používáme zejména pro bezpečnost, stabilitu, prevenci zneužití, technickou správu a zlepšování platformy.</p></section>
-        <section class="section" id="s8"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">8</span>Právní základy zpracování</h2><p>Osobní údaje zpracováváme pouze tehdy, když k tomu máme odpovídající právní důvod.</p><p>Podle okolností může jít zejména o:</p><ul><li>plnění smluvního nebo uživatelského vztahu;</li><li>oprávněný zájem na provozu, bezpečnosti a ochraně platformy;</li><li>splnění právních povinností;</li><li>souhlas uživatele tam, kde je souhlas vyžadován;</li><li>kroky před uzavřením partnerského vztahu.</li></ul></section>
-        <section class="section" id="s9"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">9</span>Zvláštní partnerské funkce</h2><p>Některé funkce platformy mohou být dostupné pouze Partnerům za zvláštních podmínek.</p><p>V takovém případě může být nutné zpracovávat další údaje, provést dodatečné ověření nebo použít samostatné partnerské, provozní nebo compliance podmínky.</p><p>Tyto Zásady upravují základní veřejnou vrstvu ARENIX.app. Pokud budou pro konkrétní partnerskou funkci platit zvláštní pravidla zpracování údajů, mohou být uvedena v samostatném dodatku nebo zvláštních podmínkách.</p></section>
-        <section class="section" id="s10"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">10</span>Sdílení údajů s třetími stranami</h2><p>Osobní údaje neprodáváme.</p><p>Údaje můžeme sdílet pouze v nezbytném rozsahu s poskytovateli služeb, kteří nám pomáhají provozovat platformu, například:</p><ul><li>hosting;</li><li>technická infrastruktura;</li><li>bezpečnostní nástroje;</li><li>analytika;</li><li>emailová nebo komunikační infrastruktura;</li><li>compliance nebo ověřovací služby, pokud budou potřebné;</li><li>právní nebo odborní poradci.</li></ul><p>Třetí strany mohou údaje zpracovávat pouze v rozsahu potřebném pro poskytování svých služeb nebo v rozsahu vyžadovaném právními předpisy.</p></section>
-        <section class="section" id="s11"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">11</span>Uchovávání údajů</h2><p>Osobní údaje uchováváme pouze po dobu, která je potřebná pro účely uvedené v těchto Zásadách.</p><p>Doba uchování se může lišit podle typu údaje, účelu zpracování, právních povinností, bezpečnostních důvodů nebo potřeby ochrany práv Poskytovatele.</p><p>Pokud údaje již nejsou potřebné, mohou být vymazány, anonymizovány nebo bezpečně omezeny.</p></section>
-        <section class="section" id="s12"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">12</span>Práva uživatelů</h2><p>V závislosti na příslušných právních předpisech může mít uživatel právo:</p><ul><li>získat informaci o zpracování svých údajů;</li><li>požádat o přístup ke svým údajům;</li><li>požádat o opravu nesprávných údajů;</li><li>požádat o výmaz údajů;</li><li>požádat o omezení zpracování;</li><li>vznést námitku proti určitému zpracování;</li><li>požádat o přenositelnost údajů, pokud se použije;</li><li>odvolat souhlas tam, kde je zpracování založeno na souhlasu.</li></ul><p>Některá práva mohou být omezena zákonnými povinnostmi, bezpečnostními důvody, ochranou platformy nebo technickou povahou konkrétního zpracování.</p></section>
-        <section class="section" id="s13"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">13</span>Bezpečnost</h2><p>Používáme přiměřená technická a organizační opatření na ochranu údajů před neoprávněným přístupem, ztrátou, zneužitím, změnou nebo zveřejněním.</p><p>Žádná online služba však nemůže garantovat absolutní bezpečnost. Uživatelé jsou odpovědní za bezpečné používání svých účtů, zařízení a přístupových údajů.</p></section>
-        <section class="section" id="s14"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">14</span>Děti a nezletilé osoby</h2><p>Platforma není určena pro osoby mladší 18 let.</p><p>Pokud zjistíme, že byly zpracovány údaje osoby, která nesplňuje věkovou podmínku, můžeme přijmout opatření k omezení nebo ukončení přístupu a odstranění příslušných údajů v rozsahu, v jakém je to možné.</p></section>
-        <section class="section" id="s15"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">15</span>Změny těchto Zásad</h2><p>Tyto Zásady můžeme čas od času aktualizovat.</p><p>Aktualizované znění bude zveřejněno na platformě nebo oznámeno jiným přiměřeným způsobem.</p><p>Pokračování v používání platformy po zveřejnění aktualizovaných Zásad znamená, že uživatel bere aktualizované znění na vědomí.</p></section>
-        <section class="section" id="s16"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">16</span>Kontakt a přístup k platformě</h2><p><strong>ARENIX.app</strong> je postaven na partnerském modelu.</p><p>Zájemci o partnerský přístup mohou začít prostřednictvím oficiální landing page ARENIX.app.</p><p>Účastníci Arény nevstupují do platformy přímou veřejnou registrací. Vstup účastníka je možný prostřednictvím pozvánky nebo vstupního odkazu od Partnera, který danou Arénu organizuje.</p><p>Pokud je uživatel členem konkrétní komunity, musí si vstup do Arény vyžádat přímo od Partnera, který danou Arénu organizuje.</p></section>
+                <section class="section" id="s1">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">1</span>Introduction</h2>
+          <p>This Privacy Policy explains how <strong>ARENIX.app</strong> processes personal data when the platform is used.</p>
+          <p><strong>ARENIX.app</strong> is built on a partner-based model. The platform primarily serves Partners who create their own Arenas, invite members of their community and verify community activity in practice.</p>
+          <p>Our goal is to process only the data needed for platform operation, security, partner access management, Arena functionality and protection of system integrity.</p>
+        </section>
+        <section class="section" id="s2">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">2</span>Basic Data Model of the Platform</h2>
+          <p><strong>ARENIX.app</strong> works with two basic groups of users:</p>
+          <ul>
+            <li><strong>Partner</strong> – a person, brand, community, mentor, educator or community leader who creates an Arena and invites members of their community.</li>
+            <li><strong>Arena Participant</strong> – a community member who enters an Arena through an invitation or entry link from a Partner.</li>
+          </ul>
+          <p>The platform is not designed as a public database of traders. ARENIX does not automatically take over a Partner's community as its own commercial database.</p>
+        </section>
+        <section class="section" id="s3">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">3</span>Data We May Process About Partners</h2>
+          <p>For Partners, we may process in particular:</p>
+          <ul>
+            <li>name or brand name;</li>
+            <li>contact details;</li>
+            <li>community name;</li>
+            <li>community size;</li>
+            <li>a link to Telegram, Discord, a social network or another community channel;</li>
+            <li>data from the partner application;</li>
+            <li>data about created Arenas;</li>
+            <li>technical and operational data related to use of the platform;</li>
+            <li>communication related to partner access.</li>
+          </ul>
+          <p>We use this data mainly for:</p>
+          <ul>
+            <li>creating and managing partner access;</li>
+            <li>enabling Arena creation;</li>
+            <li>assessing the suitability of a community for further cooperation;</li>
+            <li>ensuring platform security;</li>
+            <li>protection against misuse;</li>
+            <li>operational communication with the Partner;</li>
+            <li>development of the partner relationship.</li>
+          </ul>
+        </section>
+        <section class="section" id="s4">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">4</span>Data We May Process About Arena Participants</h2>
+          <p>For Arena Participants, we aim to process only the minimum scope of data needed for entry and operation within an Arena.</p>
+          <p>This may include in particular:</p>
+          <ul>
+            <li>email address;</li>
+            <li>user identifier or nickname;</li>
+            <li>information about entry through a specific invitation;</li>
+            <li>assignment to a specific Arena;</li>
+            <li>activity in the Arena;</li>
+            <li>leaderboard position;</li>
+            <li>Arena Credits;</li>
+            <li>technical data needed for security and platform operation.</li>
+          </ul>
+          <p>ARENIX does not need to know the real identity of an Arena Participant unless this is necessary for a specific function, security reason, legal obligation or special partner terms.</p>
+        </section>
+        <section class="section" id="s5">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">5</span>Partner Community</h2>
+          <p>The Partner builds their own relationship with their community.</p>
+          <p>ARENIX provides the tool, interface and infrastructure. ARENIX does not automatically sell, take over or use the Partner's community as its own commercial database.</p>
+          <p>If a Partner invites members into an Arena, the data of those participants is used primarily for the operation of that specific Arena, display of results, access management and platform security.</p>
+          <p>The Partner is responsible for inviting their members in a lawful and fair manner.</p>
+        </section>
+        <section class="section" id="s6">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">6</span>Arena Credits, Leaderboard and Activity</h2>
+          <p>The platform may process data about Arena activity, ranking, score, Arena Credits and other data needed to display results according to the rules of a specific Arena.</p>
+          <p>This data is used for Arena operation, leaderboard display, evaluation of community activity and protection of platform integrity.</p>
+          <p>Arena Credits have no monetary value and are not intended for payout, exchange or use as a substitute for money.</p>
+        </section>
+        <section class="section" id="s7">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">7</span>Technical Data</h2>
+          <p>When the platform is used, we may process technical data, for example:</p>
+          <ul>
+            <li>IP address;</li>
+            <li>device type;</li>
+            <li>browser type;</li>
+            <li>operating system;</li>
+            <li>access time;</li>
+            <li>technical logs;</li>
+            <li>security logs;</li>
+            <li>error records;</li>
+            <li>information needed to protect the platform.</li>
+          </ul>
+          <p>We use this data mainly for security, stability, misuse prevention, technical administration and improvement of the platform.</p>
+        </section>
+        <section class="section" id="s8">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">8</span>Legal Bases for Processing</h2>
+          <p>We process personal data only when we have an appropriate legal basis to do so.</p>
+          <p>Depending on the circumstances, this may include in particular:</p>
+          <ul>
+            <li>performance of a contractual or user relationship;</li>
+            <li>legitimate interest in operating, securing and protecting the platform;</li>
+            <li>compliance with legal obligations;</li>
+            <li>user consent where consent is required;</li>
+            <li>steps taken before entering into a partner relationship.</li>
+          </ul>
+        </section>
+        <section class="section" id="s9">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">9</span>Special Partner Features</h2>
+          <p>Some platform features may be available only to Partners under special conditions.</p>
+          <p>In such cases, it may be necessary to process additional data, perform additional verification or apply separate partner, operational or compliance terms.</p>
+          <p>This Policy governs the basic public layer of ARENIX.app. If special data-processing rules apply to a specific partner feature, they may be set out in a separate addendum or special terms.</p>
+        </section>
+        <section class="section" id="s10">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">10</span>Sharing Data with Third Parties</h2>
+          <p>We do not sell personal data.</p>
+          <p>We may share data only to the necessary extent with service providers that help us operate the platform, for example:</p>
+          <ul>
+            <li>hosting;</li>
+            <li>technical infrastructure;</li>
+            <li>security tools;</li>
+            <li>analytics;</li>
+            <li>email or communication infrastructure;</li>
+            <li>compliance or verification services, where needed;</li>
+            <li>legal or professional advisers.</li>
+          </ul>
+          <p>Third parties may process data only to the extent necessary to provide their services or to the extent required by law.</p>
+        </section>
+        <section class="section" id="s11">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">11</span>Data Retention</h2>
+          <p>We retain personal data only for the period necessary for the purposes described in this Policy.</p>
+          <p>The retention period may vary depending on the type of data, processing purpose, legal obligations, security reasons or the need to protect the Provider's rights.</p>
+          <p>When data is no longer needed, it may be deleted, anonymized or securely restricted.</p>
+        </section>
+        <section class="section" id="s12">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">12</span>User Rights</h2>
+          <p>Depending on applicable law, a user may have the right to:</p>
+          <ul>
+            <li>obtain information about the processing of their data;</li>
+            <li>request access to their data;</li>
+            <li>request correction of inaccurate data;</li>
+            <li>request deletion of data;</li>
+            <li>request restriction of processing;</li>
+            <li>object to certain processing;</li>
+            <li>request data portability, where applicable;</li>
+            <li>withdraw consent where processing is based on consent.</li>
+          </ul>
+          <p>Some rights may be limited by legal obligations, security reasons, protection of the platform or the technical nature of specific processing.</p>
+        </section>
+        <section class="section" id="s13">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">13</span>Security</h2>
+          <p>We use appropriate technical and organizational measures to protect data against unauthorized access, loss, misuse, alteration or disclosure.</p>
+          <p>No online service can guarantee absolute security. Users are responsible for the secure use of their accounts, devices and access credentials.</p>
+        </section>
+        <section class="section" id="s14">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">14</span>Children and Minors</h2>
+          <p>The platform is not intended for persons under 18 years of age.</p>
+          <p>If we discover that data of a person who does not meet the age requirement has been processed, we may take steps to restrict or terminate access and remove the relevant data to the extent possible.</p>
+        </section>
+        <section class="section" id="s15">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">15</span>Changes to this Policy</h2>
+          <p>We may update this Policy from time to time.</p>
+          <p>The updated version will be published on the platform or communicated in another appropriate manner.</p>
+          <p>Continuing to use the platform after the updated Policy has been published means that the user acknowledges the updated version.</p>
+        </section>
+        <section class="section" id="s16">
+          <div class="section-top"><a class="back-to-toc" href="#obsah">↑ Contents</a></div>
+          <h2><span class="num">16</span>Contact and Platform Access</h2>
+          <p><strong>ARENIX.app</strong> is built on a partner-based model.</p>
+          <p>Parties interested in partner access may start through the official ARENIX.app landing page.</p>
+          <p>Arena Participants do not enter the platform through direct public registration. Participant entry is possible through an invitation or entry link from the Partner who organizes the relevant Arena.</p>
+          <p>If the user is a member of a specific community, they must request Arena access directly from the Partner who organizes that Arena.</p>
+        </section>
       </article>
     </div>
 
-    <footer class="footer">© ARENIX.app · Zásady ochrany osobních údajů · Core Arena Privacy Policy</footer>
+    <footer class="footer">© ARENIX.app · Privacy Policy · Core Arena Privacy Policy</footer>
   </main>
 
   <script>
@@ -410,7 +624,7 @@
         if ((event.ctrlKey || event.metaKey) && blockedKeys.has(key)) { event.preventDefault(); return false; }
         if (event.key === "F12") { event.preventDefault(); return false; }
       });
-      window.addEventListener("beforeprint", function () { document.title = "Tisk není povolen"; });
+      window.addEventListener("beforeprint", function () { document.title = "Printing is not allowed"; });
     })();
   </script>
 </body>
