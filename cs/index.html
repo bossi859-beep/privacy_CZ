@@ -1,1 +1,417 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARENIX.app | Zásady ochrany osobních údajů</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root {
+      --bg-deep: #07150f;
+      --bg-green: #0d261a;
+      --panel: #fff8e7;
+      --panel-soft: #fbf0d2;
+      --gold: #d6ad55;
+      --gold-soft: #f1d58b;
+      --green: #0f7a4b;
+      --green-dark: #0b4a31;
+      --cream: #fff8e7;
+      --text: #1e1a13;
+      --muted: #6d624d;
+      --line: rgba(214, 173, 85, 0.35);
+      --shadow: rgba(0, 0, 0, 0.32);
+    }
 
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(214, 173, 85, 0.19), transparent 34rem),
+        radial-gradient(circle at top right, rgba(15, 122, 75, 0.32), transparent 31rem),
+        linear-gradient(135deg, var(--bg-deep), var(--bg-green));
+      color: var(--text);
+      line-height: 1.72;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.12));
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 38px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(214, 173, 85, 0.46);
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(255, 248, 231, 0.98), rgba(250, 236, 197, 0.96)),
+        var(--cream);
+      box-shadow: 0 30px 80px var(--shadow);
+      padding: clamp(26px, 5vw, 58px);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      right: -170px;
+      top: -180px;
+      background: radial-gradient(circle, rgba(214,173,85,0.45), rgba(15,122,75,0.06), transparent 70%);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 32px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 14px; }
+
+    .mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      border: 1px solid rgba(214, 173, 85, 0.7);
+      box-shadow: 0 10px 30px rgba(15, 122, 75, 0.25);
+      display: grid;
+      place-items: center;
+      color: var(--gold-soft);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      font-size: 21px;
+    }
+
+    .brand-text strong { display: block; font-size: 17px; letter-spacing: 0.02em; color: var(--green-dark); }
+    .brand-text span { color: var(--muted); font-size: 13px; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--green-dark);
+      background: rgba(255, 255, 255, 0.45);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(15, 122, 75, 0.12);
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      color: #102015;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      margin: 18px 0 0;
+      max-width: 760px;
+      font-size: clamp(17px, 2.2vw, 23px);
+      line-height: 1.5;
+      color: #3f382b;
+    }
+
+    .meta-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .meta-card {
+      border: 1px solid rgba(214, 173, 85, 0.35);
+      background: rgba(255, 255, 255, 0.42);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .meta-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .meta-card strong { color: #211c13; font-size: 14px; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-top: 26px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      border-radius: 24px;
+      background: rgba(255, 248, 231, 0.94);
+      border: 1px solid rgba(214, 173, 85, 0.36);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+      padding: 20px;
+      max-height: calc(100vh - 40px);
+      overflow: auto;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      color: var(--green-dark);
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .toc a {
+      display: block;
+      color: #473e2e;
+      text-decoration: none;
+      font-size: 13px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(214, 173, 85, 0.18);
+    }
+
+    .toc a:hover { color: var(--green); }
+    .content { min-width: 0; }
+
+    .section {
+      border-radius: 24px;
+      background: rgba(255, 248, 231, 0.96);
+      border: 1px solid rgba(214, 173, 85, 0.32);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+      padding: clamp(22px, 4vw, 34px);
+      margin-bottom: 18px;
+      scroll-margin-top: 18px;
+    }
+
+    .section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 18px;
+      color: #102015;
+      font-size: clamp(23px, 3vw, 34px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .section h2 .num {
+      flex: 0 0 auto;
+      min-width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: inline-grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: var(--gold-soft);
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    .section-top { display: none; align-items: center; justify-content: flex-end; margin: -4px 0 12px; }
+
+    .back-to-toc,
+    .floating-toc {
+      text-decoration: none;
+      border: 1px solid rgba(214, 173, 85, 0.55);
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: var(--gold-soft);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      padding: 8px 12px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.22);
+    }
+
+    .floating-toc { display: none; position: fixed; right: 14px; bottom: 18px; z-index: 80; }
+
+    p { margin: 0 0 14px; font-size: 16px; }
+    strong { color: #0d3d29; }
+    ul { margin: 10px 0 18px; padding-left: 20px; }
+    li { margin: 7px 0; }
+
+    .footer {
+      color: rgba(255, 248, 231, 0.78);
+      text-align: center;
+      margin-top: 34px;
+      font-size: 13px;
+    }
+
+    .watermark {
+      position: fixed;
+      right: 18px;
+      bottom: 14px;
+      color: rgba(255, 248, 231, 0.5);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: relative; top: 0; max-height: none; }
+      .meta-grid { grid-template-columns: 1fr; }
+      .brand-row { align-items: flex-start; flex-direction: column; }
+      .section-top { display: flex; }
+      .floating-toc { display: inline-flex; }
+      .watermark { display: none; }
+    }
+
+    @media print {
+      body * { visibility: hidden !important; }
+      body::after {
+        content: "Tisk této stránky není povolen.";
+        visibility: visible !important;
+        display: block;
+        color: #111;
+        font-size: 22px;
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false">
+  <div class="watermark">ARENIX.app · Protected Privacy View</div>
+  <a class="floating-toc" href="#obsah" aria-label="Zpět na obsah">↑ Obsah</a>
+
+  <main class="page">
+    <header class="hero">
+      <div class="brand-row">
+        <div class="brand">
+          <div class="mark">A</div>
+          <div class="brand-text">
+            <strong>ARENIX.app</strong>
+            <span>Core Arena Privacy Policy</span>
+          </div>
+        </div>
+        <div class="badge"><span class="badge-dot"></span>Zásady ochrany osobních údajů</div>
+      </div>
+
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Zásady ochrany osobních údajů platformy ARENIX.app pro Partnery, účastníky Arény a členy komunit.</p>
+
+      <div class="meta-grid">
+        <div class="meta-card">
+          <span>Datum účinnosti</span>
+          <strong>03. MAY 2026</strong>
+        </div>
+        <div class="meta-card">
+          <span>Poskytovatel software</span>
+          <strong>AKO SOLUTIONS LLC, TRADE LICENCE 887171, DUBAI, SAE</strong>
+        </div>
+        <div class="meta-card">
+          <span>Webová stránka</span>
+          <strong>arenix.app a její podstránky</strong>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="toc" id="obsah" aria-label="Obsah">
+        <h2>Obsah</h2>
+        <a href="#s1">1. Úvod</a>
+        <a href="#s2">2. Základní datový model platformy</a>
+        <a href="#s3">3. Údaje o Partnerech</a>
+        <a href="#s4">4. Údaje o účastnících Arény</a>
+        <a href="#s5">5. Partnerova komunita</a>
+        <a href="#s6">6. Arena Credits, leaderboard a aktivita</a>
+        <a href="#s7">7. Technické údaje</a>
+        <a href="#s8">8. Právní základy zpracování</a>
+        <a href="#s9">9. Zvláštní partnerské funkce</a>
+        <a href="#s10">10. Sdílení údajů s třetími stranami</a>
+        <a href="#s11">11. Uchovávání údajů</a>
+        <a href="#s12">12. Práva uživatelů</a>
+        <a href="#s13">13. Bezpečnost</a>
+        <a href="#s14">14. Děti a nezletilé osoby</a>
+        <a href="#s15">15. Změny těchto Zásad</a>
+        <a href="#s16">16. Kontakt a přístup k platformě</a>
+      </aside>
+
+      <article class="content">
+        <section class="section" id="s1"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">1</span>Úvod</h2><p>Tyto Zásady ochrany osobních údajů vysvětlují, jak <strong>ARENIX.app</strong> zpracovává osobní údaje při používání platformy.</p><p><strong>ARENIX.app</strong> je postaven na partnerském modelu. Platforma slouží především Partnerům, kteří vytvářejí vlastní Arény, zvou členy své komunity a ověřují aktivitu své komunity v praxi.</p><p>Naším cílem je zpracovávat pouze takové údaje, které jsou potřebné pro provoz platformy, bezpečnost, správu partnerského přístupu, fungování Arén a ochranu integrity systému.</p></section>
+        <section class="section" id="s2"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">2</span>Jaký je základní datový model platformy</h2><p><strong>ARENIX.app</strong> pracuje se dvěma základními skupinami uživatelů:</p><ul><li><strong>Partner</strong> – osoba, značka, komunita, mentor, edukátor nebo lídr komunity, který vytváří vlastní Arénu a zve členy své komunity.</li><li><strong>Účastník Arény</strong> – člen komunity, který vstupuje do Arény prostřednictvím pozvánky nebo vstupního odkazu od Partnera.</li></ul><p>Platforma není navržena jako veřejná databáze traderů. ARENIX automaticky nepřebírá Partnerovu komunitu jako vlastní obchodní databázi.</p></section>
+        <section class="section" id="s3"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">3</span>Jaké údaje můžeme zpracovávat o Partnerech</h2><p>U Partnerů můžeme zpracovávat zejména:</p><ul><li>jméno nebo název značky;</li><li>kontaktní údaj;</li><li>název komunity;</li><li>velikost komunity;</li><li>odkaz na Telegram, Discord, sociální síť nebo jiný komunitní kanál;</li><li>údaje z partnerské žádosti;</li><li>údaje o vytvořených Arénách;</li><li>technické a provozní údaje související s používáním platformy;</li><li>komunikaci související s partnerským přístupem.</li></ul><p>Tyto údaje používáme zejména pro:</p><ul><li>vytvoření a správu partnerského přístupu;</li><li>umožnění vytvoření Arény;</li><li>posouzení vhodnosti komunity pro další spolupráci;</li><li>zajištění bezpečnosti platformy;</li><li>ochranu proti zneužití;</li><li>provozní komunikaci s Partnerem;</li><li>rozvoj partnerského vztahu.</li></ul></section>
+        <section class="section" id="s4"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">4</span>Jaké údaje můžeme zpracovávat o účastnících Arény</h2><p>U účastníků Arény se snažíme zpracovávat pouze minimální rozsah údajů potřebný pro vstup a fungování v Aréně.</p><p>Může jít zejména o:</p><ul><li>emailovou adresu;</li><li>uživatelský identifikátor nebo přezdívku;</li><li>informaci o vstupu přes konkrétní pozvánku;</li><li>přiřazení ke konkrétní Aréně;</li><li>aktivitu v Aréně;</li><li>pořadí v leaderboardu;</li><li>Arena Credits;</li><li>technické údaje potřebné pro bezpečnost a provoz platformy.</li></ul><p>ARENIX nepotřebuje znát skutečnou identitu účastníka Arény, pokud to není nezbytné pro konkrétní funkci, bezpečnostní důvod, právní povinnost nebo zvláštní partnerské podmínky.</p></section>
+        <section class="section" id="s5"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">5</span>Partnerova komunita</h2><p>Partner si buduje svůj vlastní vztah se svou komunitou.</p><p>ARENIX poskytuje nástroj, rozhraní a infrastrukturu. ARENIX automaticky neprodává, nepřebírá ani nevyužívá Partnerovu komunitu jako vlastní obchodní databázi.</p><p>Pokud Partner pozve své členy do Arény, údaje těchto účastníků se používají především pro fungování konkrétní Arény, zobrazení výsledků, správu přístupu a bezpečnost platformy.</p><p>Partner odpovídá za to, že své členy zve zákonným a korektním způsobem.</p></section>
+        <section class="section" id="s6"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">6</span>Arena Credits, leaderboard a aktivita v Aréně</h2><p>Platforma může zpracovávat údaje o aktivitě v Aréně, pořadí, skóre, Arena Credits a dalších údajích potřebných pro zobrazení výsledků podle pravidel konkrétní Arény.</p><p>Tyto údaje slouží pro fungování Arény, zobrazení leaderboardu, vyhodnocení aktivity komunity a ochranu integrity platformy.</p><p>Arena Credits nemají peněžní hodnotu a nejsou určeny k výplatě, směně ani použití jako náhrada peněz.</p></section>
+        <section class="section" id="s7"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">7</span>Technické údaje</h2><p>Při používání platformy můžeme zpracovávat technické údaje, například:</p><ul><li>IP adresu;</li><li>typ zařízení;</li><li>typ prohlížeče;</li><li>operační systém;</li><li>čas přístupu;</li><li>technické logy;</li><li>bezpečnostní logy;</li><li>chybové záznamy;</li><li>informace potřebné pro ochranu platformy.</li></ul><p>Tyto údaje používáme zejména pro bezpečnost, stabilitu, prevenci zneužití, technickou správu a zlepšování platformy.</p></section>
+        <section class="section" id="s8"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">8</span>Právní základy zpracování</h2><p>Osobní údaje zpracováváme pouze tehdy, když k tomu máme odpovídající právní důvod.</p><p>Podle okolností může jít zejména o:</p><ul><li>plnění smluvního nebo uživatelského vztahu;</li><li>oprávněný zájem na provozu, bezpečnosti a ochraně platformy;</li><li>splnění právních povinností;</li><li>souhlas uživatele tam, kde je souhlas vyžadován;</li><li>kroky před uzavřením partnerského vztahu.</li></ul></section>
+        <section class="section" id="s9"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">9</span>Zvláštní partnerské funkce</h2><p>Některé funkce platformy mohou být dostupné pouze Partnerům za zvláštních podmínek.</p><p>V takovém případě může být nutné zpracovávat další údaje, provést dodatečné ověření nebo použít samostatné partnerské, provozní nebo compliance podmínky.</p><p>Tyto Zásady upravují základní veřejnou vrstvu ARENIX.app. Pokud budou pro konkrétní partnerskou funkci platit zvláštní pravidla zpracování údajů, mohou být uvedena v samostatném dodatku nebo zvláštních podmínkách.</p></section>
+        <section class="section" id="s10"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">10</span>Sdílení údajů s třetími stranami</h2><p>Osobní údaje neprodáváme.</p><p>Údaje můžeme sdílet pouze v nezbytném rozsahu s poskytovateli služeb, kteří nám pomáhají provozovat platformu, například:</p><ul><li>hosting;</li><li>technická infrastruktura;</li><li>bezpečnostní nástroje;</li><li>analytika;</li><li>emailová nebo komunikační infrastruktura;</li><li>compliance nebo ověřovací služby, pokud budou potřebné;</li><li>právní nebo odborní poradci.</li></ul><p>Třetí strany mohou údaje zpracovávat pouze v rozsahu potřebném pro poskytování svých služeb nebo v rozsahu vyžadovaném právními předpisy.</p></section>
+        <section class="section" id="s11"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">11</span>Uchovávání údajů</h2><p>Osobní údaje uchováváme pouze po dobu, která je potřebná pro účely uvedené v těchto Zásadách.</p><p>Doba uchování se může lišit podle typu údaje, účelu zpracování, právních povinností, bezpečnostních důvodů nebo potřeby ochrany práv Poskytovatele.</p><p>Pokud údaje již nejsou potřebné, mohou být vymazány, anonymizovány nebo bezpečně omezeny.</p></section>
+        <section class="section" id="s12"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">12</span>Práva uživatelů</h2><p>V závislosti na příslušných právních předpisech může mít uživatel právo:</p><ul><li>získat informaci o zpracování svých údajů;</li><li>požádat o přístup ke svým údajům;</li><li>požádat o opravu nesprávných údajů;</li><li>požádat o výmaz údajů;</li><li>požádat o omezení zpracování;</li><li>vznést námitku proti určitému zpracování;</li><li>požádat o přenositelnost údajů, pokud se použije;</li><li>odvolat souhlas tam, kde je zpracování založeno na souhlasu.</li></ul><p>Některá práva mohou být omezena zákonnými povinnostmi, bezpečnostními důvody, ochranou platformy nebo technickou povahou konkrétního zpracování.</p></section>
+        <section class="section" id="s13"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">13</span>Bezpečnost</h2><p>Používáme přiměřená technická a organizační opatření na ochranu údajů před neoprávněným přístupem, ztrátou, zneužitím, změnou nebo zveřejněním.</p><p>Žádná online služba však nemůže garantovat absolutní bezpečnost. Uživatelé jsou odpovědní za bezpečné používání svých účtů, zařízení a přístupových údajů.</p></section>
+        <section class="section" id="s14"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">14</span>Děti a nezletilé osoby</h2><p>Platforma není určena pro osoby mladší 18 let.</p><p>Pokud zjistíme, že byly zpracovány údaje osoby, která nesplňuje věkovou podmínku, můžeme přijmout opatření k omezení nebo ukončení přístupu a odstranění příslušných údajů v rozsahu, v jakém je to možné.</p></section>
+        <section class="section" id="s15"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">15</span>Změny těchto Zásad</h2><p>Tyto Zásady můžeme čas od času aktualizovat.</p><p>Aktualizované znění bude zveřejněno na platformě nebo oznámeno jiným přiměřeným způsobem.</p><p>Pokračování v používání platformy po zveřejnění aktualizovaných Zásad znamená, že uživatel bere aktualizované znění na vědomí.</p></section>
+        <section class="section" id="s16"><div class="section-top"><a class="back-to-toc" href="#obsah">↑ Obsah</a></div><h2><span class="num">16</span>Kontakt a přístup k platformě</h2><p><strong>ARENIX.app</strong> je postaven na partnerském modelu.</p><p>Zájemci o partnerský přístup mohou začít prostřednictvím oficiální landing page ARENIX.app.</p><p>Účastníci Arény nevstupují do platformy přímou veřejnou registrací. Vstup účastníka je možný prostřednictvím pozvánky nebo vstupního odkazu od Partnera, který danou Arénu organizuje.</p><p>Pokud je uživatel členem konkrétní komunity, musí si vstup do Arény vyžádat přímo od Partnera, který danou Arénu organizuje.</p></section>
+      </article>
+    </div>
+
+    <footer class="footer">© ARENIX.app · Zásady ochrany osobních údajů · Core Arena Privacy Policy</footer>
+  </main>
+
+  <script>
+    (function () {
+      const blockedKeys = new Set(["c", "x", "s", "p", "u", "a"]);
+      document.addEventListener("copy", function (event) { event.preventDefault(); });
+      document.addEventListener("cut", function (event) { event.preventDefault(); });
+      document.addEventListener("selectstart", function (event) { event.preventDefault(); });
+      document.addEventListener("dragstart", function (event) { event.preventDefault(); });
+      document.addEventListener("keydown", function (event) {
+        const key = String(event.key || "").toLowerCase();
+        if ((event.ctrlKey || event.metaKey) && blockedKeys.has(key)) { event.preventDefault(); return false; }
+        if (event.key === "F12") { event.preventDefault(); return false; }
+      });
+      window.addEventListener("beforeprint", function () { document.title = "Tisk není povolen"; });
+    })();
+  </script>
+</body>
+</html>
